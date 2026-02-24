@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { getUsers, createUser, updateUser, deleteUser } from './api/users';
 
-// ─── MOCK API (replace with real axios calls in production) ──────────────────
-// In your real app, swap these with:
 //   import { getUsers, createUser, updateUser, deleteUser } from './api/users';
 const ROLES = ["Admin", "Developer", "Designer", "Manager", "Analyst"];
 const AVATARS = ["🦊", "🐺", "🦁", "🐯", "🦅", "🦋", "🐉", "🦄"];
@@ -12,7 +11,7 @@ let _db = [
   { _id: "2", name: "Kai Renton",    email: "kai@nexus.io",     role: "Developer", avatar: "🐉", createdAt: "2025-01-14" },
   { _id: "3", name: "Zara Osei",     email: "zara@nexus.io",    role: "Designer",  avatar: "🦋", createdAt: "2025-02-01" },
 ];
-import { getUsers, createUser, updateUser, deleteUser } from './api/users';
+
 
 const api = {
   getUsers:   ()        => getUsers().then(res => res.data),

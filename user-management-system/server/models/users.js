@@ -1,6 +1,6 @@
 // server/routes/users.js
 const router = require('express').Router();
-const User = require('../models/User');
+const User = require('../models/user');
 
 router.get('/',           async (req, res) => res.json(await User.find()));
 router.post('/',          async (req, res) => res.json(await User.create(req.body)));

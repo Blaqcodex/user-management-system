@@ -1,0 +1,1 @@
+A full‑stack web application that implements a simple User Management System. The project integrates front‑end UI with a back‑end server and database, enabling users to add, view, update, and delete their profiles.
